@@ -6,7 +6,7 @@ const apiv1Routes = require("./routes/apiv1.routes");
 const errorRoutes = require("./routes/error.routes");
 require("dotenv").config();
 
-const PORT = process.env.PORT ?? 8001;
+const PORT = process.env.PORT ?? 8000;
 
 const app = express();
 
