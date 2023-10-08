@@ -6,6 +6,7 @@ module.exports = {
     password: "root",
     database: "chat_db_27",
     host: "localhost",
+    port: 5433,
     dialect: "postgres",
     logging: false,
   },
