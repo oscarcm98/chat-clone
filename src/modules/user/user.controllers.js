@@ -121,9 +121,3 @@ module.exports = {
   getAllUsers,
   uploadAvatar,
 };
-
-// 1.- Enviar un correo electronico a la direccion que nos dieron (link)
-// 2.- Presionar en el link para que nos confirme que si es real y es de esa persona
-
-// que nuestro servicio / backend pueda mandar correos electronicos
-// nodemailer npm
