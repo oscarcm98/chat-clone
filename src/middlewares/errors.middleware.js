@@ -22,7 +22,7 @@ const getError = (req, err, res) => {
 const errorLogger = (err, req, res, next) => {
   const date = new Date().toLocaleString();
   const current = dayjs().format("YYYY-MM-DD");
-  console.log(err); // mostrar la fecha y hora en la que sucedio el error
+  console.log(err);
   const filePath = path.join(__dirname, `../logs/${current}-logs.txt`);
   fs.appendFile(
     filePath,
@@ -39,7 +39,7 @@ const ormErrorHandler = (err, req, res, next) => {
       message: err.name,
     });
   }
-  // verificamos si el error fue creado con la lase ValidationError
+  
   if (err instanceof ValidationError) {
     return res.status(400).json({
       error: err.name,
@@ -89,5 +89,3 @@ module.exports = {
   errorHandler,
   notFoundErrorHandler,
 };
-
-// TODO tarea -> escribir un manejador de erroes  para jsonwebtoken
